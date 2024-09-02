@@ -1,0 +1,224 @@
+/* Palette di colori basata sull'immagine fornita */
+:root {
+  --color-primary-dark: #000000;
+  --color-primary: #0b1e81;
+  --color-primary-light: #2b4e8c;
+  --color-accent-blue: #6a84e6;
+  --color-accent-yellow-dark: #f7a329;
+  --color-accent-yellow: #f3c049;
+  --color-accent-yellow-light: #fbe9c1;
+  --color-background: #fefdfc;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background);
+  color: var(--color-primary-dark);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--color-background);
+  color: white;
+  padding: 10px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 70px;
+  padding: 0 20px;
+}
+
+header .logo img {
+  width: 60px;
+  height: auto;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 50px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: rgb(17, 17, 17);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+nav ul li a:hover {
+  color: var(--color-accent-yellow);
+}
+
+.hero {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  margin-bottom: 10px;
+  font-size: 2.5em;
+}
+
+.hero p {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.cta {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--color-accent-yellow-dark);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.cta:hover {
+  background-color: var(--color-accent-yellow);
+}
+
+.about, .activities, .join {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.activities .activity {
+  background-color: #fff;
+  border: 1px solid var(--color-primary-light);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.activities .activity h3 {
+  margin-bottom: 10px;
+  color: var(--color-primary);
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--color-primary-light);
+  border-radius: 5px;
+}
+
+form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--color-accent-yellow-dark);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--color-accent-yellow);
+}
+
+footer {
+  background-color: var(--color-primary-dark);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  color: var(--color-accent-yellow-light);
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: var(--color-accent-yellow);
+}
+
+.faq {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 50px; /* utilizza var(--wp--preset--spacing--50) se hai variabili di spazio */
+  background-color: var(--color-primary);
+  color: var(--color-primary-dark);
+}
+
+.faq h2 {
+  font-size: 250px;
+  letter-spacing: -0.02em;
+  color: var(--color-accent-yellow);
+  text-align: left;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.faq hr {
+  border: none;
+  height: 2px;
+  background-color: var(--color-background);
+}
+
+.faq details {
+  border-bottom: 1px solid var(--color-background);
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.faq details summary {
+  font-size: 19px;
+  font-weight: normal;
+  color: var(--color-background);
+  cursor: pointer;
+}
+
+.faq details[open] summary {
+  color: var(--color-background);
+}
+
+.faq details p {
+  margin: 10px 0;
+  color: var(--color-background);
+  font-size: 1rem;
+}
+
+.faq details p a {
+  color: var(--color-accent-blue);
+  text-decoration: underline;
+}
+
+.faq details p a:hover {
+  color: var(--color-accent-yellow-dark);
+}
+
+.faq .wp-block-spacer {
+  margin-top: 10px;
+  margin-bottom: 0;
+  height: 10px; /* utilizza var(--wp--preset--spacing--10) se hai variabili di spazio */
+}
