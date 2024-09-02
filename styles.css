@@ -161,7 +161,7 @@ footer a {
 }
 
 footer a:hover {
-  font-size: 110%;
+  font-size: 120%;
   color: var(--color-accent-yellow);
 }
 
