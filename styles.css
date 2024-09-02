@@ -156,9 +156,12 @@ footer a {
   color: var(--color-accent-yellow-light);
   text-decoration: none;
   margin: 0 10px;
+  transition: color 0.3s;
+  transition: font-size 0.3s;
 }
 
 footer a:hover {
+  font-size: 110%;
   color: var(--color-accent-yellow);
 }
 
