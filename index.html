@@ -85,25 +85,33 @@
             <a href="https://www.linkedin.com/company/starting-finance-club-statale/" target="_blank">LinkedIn</a>
         </p>
     </footer>
+    
     <script>
         document.querySelectorAll(".faq details").forEach((detail) => {
+            let summary = detail.querySelector("summary");
+            let content = detail.querySelector("p");
+        
+            // Imposta l'altezza iniziale del contenuto a 0
+            content.style.height = '0';
+            content.style.overflow = 'hidden';
+            content.style.transition = 'height 0.4s ease';
+        
             detail.addEventListener("toggle", function() {
-                let content = this.querySelector("p");
-                
                 if (this.open) {
-                    let initialHeight = content.clientHeight;
-                    content.style.height = '0';
-                    content.style.overflow = 'hidden';
-                    requestAnimationFrame(() => {
-                        content.style.transition = 'height 0.4s ease';
-                        content.style.height = initialHeight + 'px';
-                    });
-                } else {
-                    content.style.transition = 'height 0.4s ease';
+                    // Per aprire: imposta l'altezza del contenuto alla sua altezza piena
                     content.style.height = content.scrollHeight + 'px';
-                    requestAnimationFrame(() => {
-                        content.style.height = '0';
-                    });
+                } else {
+                    // Per chiudere: riduci l'altezza del contenuto a 0
+                    content.style.height = '0';
+                }
+            });
+        
+            // Resetta l'altezza dopo la transizione per evitare problemi di visualizzazione
+            content.addEventListener('transitionend', function() {
+                if (!detail.open) {
+                    content.style.height = '0';
+                } else {
+                    content.style.height = 'auto';
                 }
             });
         });
