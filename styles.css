@@ -193,7 +193,6 @@ footer a:hover {
   padding-top: 9px;
   padding-bottom: 9px;
   overflow: hidden;
-  transition: height 1.3s ease-in-out;
 }
 
 .faq details summary {
