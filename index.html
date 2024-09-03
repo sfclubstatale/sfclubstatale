@@ -91,31 +91,33 @@
             let summary = detail.querySelector("summary");
             let content = detail.querySelector("p");
         
-            // Imposta l'altezza iniziale del contenuto a 0
+            // Inizializza l'altezza a 0 e nascondi l'overflow
             content.style.height = '0';
             content.style.overflow = 'hidden';
             content.style.transition = 'height 0.4s ease';
         
             detail.addEventListener("toggle", function() {
                 if (this.open) {
-                    // Per aprire: imposta l'altezza del contenuto alla sua altezza piena
+                    // Se è aperto, imposta l'altezza all'altezza scrollabile
                     content.style.height = content.scrollHeight + 'px';
                 } else {
-                    // Per chiudere: riduci l'altezza del contenuto a 0
-                    content.style.height = '0';
+                    // Se è chiuso, imposta l'altezza a 0
+                    content.style.height = content.scrollHeight + 'px';
+                    requestAnimationFrame(() => {
+                        content.style.height = '0';
+                    });
                 }
             });
         
-            // Resetta l'altezza dopo la transizione per evitare problemi di visualizzazione
+            // Aggiungi un reset dopo la transizione
             content.addEventListener('transitionend', function() {
-                if (!detail.open) {
-                    content.style.height = '0';
-                } else {
-                    content.style.height = 'auto';
+                if (detail.open) {
+                    content.style.height = 'auto'; // Imposta a auto quando la transizione è finita e il dettaglio è aperto
                 }
             });
         });
-    </script>
+ </script>
+
 
 </body>
 </html>
