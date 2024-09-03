@@ -85,5 +85,29 @@
             <a href="https://www.linkedin.com/company/starting-finance-club-statale/" target="_blank">LinkedIn</a>
         </p>
     </footer>
+    <script>
+        document.querySelectorAll(".faq-section details").forEach((detail) => {
+            detail.addEventListener("toggle", function() {
+                let content = this.querySelector("p");
+                
+                if (this.open) {
+                    let initialHeight = content.clientHeight;
+                    content.style.height = '0';
+                    content.style.overflow = 'hidden';
+                    requestAnimationFrame(() => {
+                        content.style.transition = 'height 0.4s ease';
+                        content.style.height = initialHeight + 'px';
+                    });
+                } else {
+                    content.style.transition = 'height 0.4s ease';
+                    content.style.height = content.scrollHeight + 'px';
+                    requestAnimationFrame(() => {
+                        content.style.height = '0';
+                    });
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
