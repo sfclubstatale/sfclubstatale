@@ -4,19 +4,32 @@
   --color-primary: #0b1e81;
   --color-primary-light: #2b4e8c;
   --color-accent-blue: #6a84e6;
-  --color-accent-yellow-dark: #f7a329;
-  --color-accent-yellow: #f3c049;
+  --color-accent-yellow-dark: #ff6474;
+  --color-accent-yellow: #ff6474;
   --color-accent-yellow-light: #fbe9c1;
   --color-background: #fefdfc;
 }
-
 body {
-  font-family: 'Inter', sans-serif;
+
+  /*per impostare il bg*/
+  background-image: url('bg.png'); /* Percorso dell'immagine */
+  background-size: cover; /* Copre l'intero sfondo */
+  background-position: center; /* Centra l'immagine */
+  background-repeat: no-repeat; /* Evita la ripetizione dell'immagine */
+  height: 100vh; /* Imposta l'altezza del body a 100% della viewport */
+  margin: 0;
+
+  
+
+  font-family: "Montserrat", Sans-serif;
+  font-weight: 1000;
   margin: 0;
   padding: 0;
   background-color: var(--color-background);
   color: var(--color-primary-dark);
   line-height: 1.6;
+
+  text-align: left;
 }
 
 header {
@@ -62,36 +75,85 @@ nav ul li a:hover {
 }
 
 .hero {
-  background-color: var(--color-primary);
-  color: white;
-  padding: 100px 20px;
+  color: #004082;
+  padding: 100px 0px;
+  padding-bottom: 70px;
   text-align: center;
 }
 
-.hero h1 {
-  margin-bottom: 10px;
-  font-size: 2.5em;
-}
 
-.hero p {
-  margin-bottom: 20px;
-  font-size: 1.2em;
-}
 
 .cta {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: var(--color-accent-yellow-dark);
+  padding: 13px 26px;
+  background-color: #004082;
   color: white;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 5px;
+  margin-top: 20px;
+
+  transition: transform 0.01s ease;
+
 }
 
 .cta:hover {
-  background-color: var(--color-accent-yellow);
+    background-color: var(--color-accent-yellow);
+    border: none;
+    padding: 13px 26px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.01s ease, box-shadow 0.01s ease;
+    box-shadow: -4px 4px 0 0 black;
+    color: white;
+    transform: translate(3px, -3px);
 }
 
+.testoNormale{
+  font-size: 25px;
+  display: inline;
+}
+
+.titoloSalmone{
+  color: white;
+  text-align: center;
+  padding-top: 40px;
+  font-size: 40px;
+}
+
+
+.divTitolo{
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.home_title{
+  color: #4EC79F;
+  text-decoration: solid;
+  font-size: 55px;
+  text-align: center;
+  font-weight: 800;
+
+}
+
+.section-bg {
+  width: 100%;
+  height: 400px; /* Imposta altezza specifica per far vedere lo sfondo */
+  margin: 0px;
+
+  background-color: #2C2C2C;
+  background-repeat: no-repeat; /* Evita la ripetizione dell'immagine */
+  background-size: cover; /* Rende lo sfondo adattabile alla sezione */
+  background-position: center; /* Posiziona lo sfondo al centro della sezione */
+}
+
+.title_green{
+  color: #4EC79F;
+  text-decoration: solid;
+  font-size: 2.5rem;
+  text-align: left;
+  margin-left: 15rem;
+}
 .about, .activities, .join {
   padding: 40px 20px;
   text-align: center;
