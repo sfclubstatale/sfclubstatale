@@ -585,9 +585,8 @@ footer a:hover {
 }
 
 
-.gridAree{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.gridAree{ display: flex;
+  flex-direction: column;
   gap: 40px 120px;
 
   width: auto;
